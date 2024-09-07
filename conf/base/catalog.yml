@@ -1,0 +1,8 @@
+fuel_consumption_during_trips_data:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/fuel_consumption_20240907.csv
+  load_args:
+    sep: ','
+    header: True
+  save_args:
+    if_exists: raise  # do not overwrite raw file
