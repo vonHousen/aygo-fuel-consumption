@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "aygo-fuel-consumption"
 version = "0.1.0"
-description = "Modelling fuel consumption by my Toyota Aygo."
+description = "Modelling fuel consumption of my Toyota Aygo."
 authors = ["Kamil Zych"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-kedro = "^0.19.8"
+kedro = "~0.19.8"
 kedro-datasets = ">=3.0"
 
 

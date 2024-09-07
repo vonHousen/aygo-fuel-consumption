@@ -1,5 +1,5 @@
 # aygo-fuel-consumption
-Modelling fuel consumption by my Toyota Aygo.
+Modelling fuel consumption of my Toyota Aygo.
 
 ## Running the project
 
