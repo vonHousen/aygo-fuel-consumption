@@ -16,9 +16,7 @@ class SparkHooks:
 
         # Initialise the spark session
         spark_session_conf = (
-            SparkSession.builder.appName(context.project_path.name)
-            .enableHiveSupport()
-            .config(conf=spark_conf)
+            SparkSession.builder.appName(context.project_path.name).enableHiveSupport().config(conf=spark_conf)
         )
         _spark_session = spark_session_conf.getOrCreate()
         _spark_session.sparkContext.setLogLevel("WARN")

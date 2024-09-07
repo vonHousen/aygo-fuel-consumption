@@ -27,6 +27,8 @@ pytest = "^8.3.2"
 pytest-cov = "^5.0.0"
 pytest-mock = "^3.14.0"
 ruff = "^0.6.4"
+pre-commit = "^3.8.0"
+interrogate = "^1.7.0"
 
 [tool.kedro]
 package_name = "aygo_fuel_consumption"
@@ -68,6 +70,37 @@ select = [
     "PL",  # Pylint
     "T201", # Print Statement
 ]
+
+
+[tool.interrogate]
+ignore-init-method = false
+ignore-init-module = true
+ignore-magic = true
+ignore-semiprivate = false
+ignore-private = true
+ignore-property-decorators = false
+ignore-module = true
+ignore-nested-functions = true
+ignore-nested-classes = false
+ignore-setters = true
+ignore-overloaded-functions = false
+fail-under = 95
+ext = []
+style = "google"
+verbose = 0
+quiet = false
+whitelist-regex = []
+color = true
+omit-covered-files = false
+exclude = [
+    # kedro-generated files
+    "conf/",
+    "docs/",
+    "src/aygo_fuel_consumption/hooks.py",
+    "src/aygo_fuel_consumption/__main__.py",
+    "tests/test_run.py",
+]
+
 
 [build-system]
 requires = ["poetry-core"]

@@ -1,6 +1,7 @@
 """aygo-fuel-consumption file for ensuring the package is executable
 as `aygo-fuel-consumption` and `python -m aygo_fuel_consumption`
 """
+
 import sys
 from pathlib import Path
 from typing import Any
@@ -13,7 +14,7 @@ def main(*args, **kwargs) -> Any:
     package_name = Path(__file__).parent.name
     configure_project(package_name)
 
-    interactive = hasattr(sys, 'ps1')
+    interactive = hasattr(sys, "ps1")
     kwargs["standalone_mode"] = not interactive
 
     run = find_run_command(package_name)

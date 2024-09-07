@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 
 # aygo_fuel_consumption documentation build
@@ -21,6 +20,7 @@
 import re
 
 from kedro.framework.cli.utils import find_stylesheets
+
 from aygo_fuel_consumption import __version__ as release
 
 # -- Project information -----------------------------------------------------
